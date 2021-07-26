@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": ".NET Core Launch (web)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/Pointer.Presentation.Api/bin/Debug/net5.0/Pointer.Presentation.Api.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/Pointer.Presentation.Api",
+      "stopAtEntry": false,
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    {
+      "name": ".NET Core Attach",
+      "type": "coreclr",
+      "request": "attach"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "ConnectionStrings": {
+    "Postgres": "User ID=USERID;Password=PASSWORD;Host=db;Port=5432;Database=pointer;"
+  },
+  "JWT": {
+    "Issuer": "",
+    "Key": ""
+  }
+}
