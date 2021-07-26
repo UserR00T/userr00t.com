@@ -29,7 +29,7 @@ Note that while you may pull the docker container for server/Pointer, the client
 
 ### Backend/Server (Pointer)
 1. Download the [docker-compose.yml](server/docker-compose.yml) to your hosting path. Double check port numbers, image names, and volumes.
-2. Create a `.env` file based on the [.env.sample][server/.env.sample] file. Here you must set the three environment variables for postgres: `POSTGRES_USER`, `POSTGRES_PASSWORD`, & `POSTGRES_DB`
+2. Create a `.env` file based on the [.env.sample](server/.env.sample) file. Here you must set the three environment variables for postgres: `POSTGRES_USER`, `POSTGRES_PASSWORD`, & `POSTGRES_DB`
 3. Create a `appsettings.json` file based on the [appsettings.json.sample](server/appsettings.json.sample). Make sure the Connection string matches the one set above in the `.env`.
 4. Your directory tree should now look something like this:
 - `.env`
