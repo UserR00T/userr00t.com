@@ -21,14 +21,14 @@ jobs:
         uses: docker/login-action@v1
         with:
           registry: ghcr.io
-          username: ${{ OWNER_LC }}
+          username: ${{ env.OWNER_LC }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and Push
         uses: docker/build-push-action@v2
         with:
           context: ./server/
           push: true
-          tags: ghcr.io/${{ OWNER_LC }}/pointer:latest, ghcr.io/${{ OWNER_LC }}/pointer:${{ steps.get_version.outputs.VERSION }}
+          tags: ghcr.io/${{ env.OWNER_LC }}/pointer:latest, ghcr.io/${{ env.OWNER_LC }}/pointer:${{ steps.get_version.outputs.VERSION }}
 
   deploy_webhook:
     runs-on: ubuntu-latest
