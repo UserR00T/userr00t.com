@@ -21,6 +21,8 @@ _Other dependencies_
 - Dapper
 - SqlKata
 - Npgsql
+- DDD Design
+- CRUD
 
 ## Installation
 Before trying to initialize this project on a webhost, make sure docker, and docker-compose are installed. Along with that, make sure you got a web server ready to serve the client html files. This is only required if you use nuxt's generate static pages method.
@@ -42,5 +44,8 @@ Run `docker-compose up -d` within the directory to start the api. By now you sho
 1. This varies from person to person. I myself just used `nuxt generate` and used nginx to serve the provided html files. Do make sure your `try_files` includes the `200.html` file for dynamic routing. eg: `try_files $uri $uri/ /200.html;`
 
 ## Building
+Run the `dotnet build` tool on the project `Pointer.Presentation.Api`. This project will be the entry point of the application. An example command would be:  
+`dotnet build Pointer.Presentation.Api/Pointer.Presentation.Api.csproj --configuration Release`. Make sure your current working directory is set to `server`.
 
 ## Building (Docker)
+Set your working directory to `server` and run the docker image build command on the [Dockerfile](server/Dockerfile).
