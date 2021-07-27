@@ -1,0 +1,15 @@
+name: Deploy Webhook Event
+on:
+  workflow_run:
+    workflows: ["Tag & Release"]
+    branches: [main]
+    types: 
+      - completed
+jobs:
+  deploy_webhook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Webhook
+        uses: joelwmale/webhook-action@master
+        with:
+          url: ${{ secrets.WEBHOOK_URL }}
