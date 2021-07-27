@@ -1,6 +1,6 @@
 services:
   pointer:
-    image: 'pointer:latest'
+    image: 'ghcr.io/userr00t/pointer:latest'
     ports:
       - 3301:80
     volumes:
