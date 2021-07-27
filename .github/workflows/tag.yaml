@@ -31,6 +31,7 @@ jobs:
           tags: ghcr.io/${{ env.OWNER_LC }}/pointer:latest, ghcr.io/${{ env.OWNER_LC }}/pointer:${{ steps.get_version.outputs.VERSION }}
 
   deploy_webhook:
+    needs: deploy_ghcr
     runs-on: ubuntu-latest
     steps:
       - name: Webhook
