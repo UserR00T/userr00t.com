@@ -1,4 +1,4 @@
-const baseUrl = process.env.NODE_ENV !== 'development' ? '/dev/314a74efe090a07db8525f30951b46bfb98a1eaa8eeae9b0fcccb5dd85ec5631/' : '/';
+const baseUrl = process.env.NODE_ENV !== 'development' ? '/' : '/';
 const baseApiUrl = process.env.NODE_ENV !== 'development' ? '/api/' : 'https://localhost:5001/api/';
 
 export default {
