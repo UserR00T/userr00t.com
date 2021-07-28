@@ -1,5 +1,5 @@
 .hero-text {
-  @apply font-extrabold tracking-tight text-gray-800;
+  @apply font-extrabold tracking-tight text-gray-800 dark:text-gray-200;
 
   &.xl {
     @apply text-4xl sm:text-5xl md:text-6xl;
@@ -15,5 +15,29 @@
 
   .text-theme {
     @apply text-red-400;
+  }
+}
+
+#__layout {
+  @apply dark:bg-gray-600 min-h-screen;
+}
+
+ul > li {
+  @apply inline;
+}
+
+.header-link {
+  @apply inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent dark:text-gray-300;
+
+  &.nuxt-link-exact-active {
+    @apply text-gray-900 border-b-2 border-red-500 dark:text-gray-300;
+
+    &:hover {
+      @apply border-red-400;
+    }
+  }
+
+  &:hover {
+    @apply border-gray-300 text-gray-700 dark:text-gray-400;
   }
 }

@@ -3,7 +3,7 @@ module.exports = {
   purge: [
     './**/*.{js,jsx,ts,tsx,vue}',
   ],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class',
   theme: {
     extend: {},
   },

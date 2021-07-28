@@ -14,13 +14,13 @@ export class EditEntity extends Vue {
     this.form.newGroup();
 
     this.form.withInput('id', 'text', (x) =>
-      x.withLabel('ID').with('placeholder', 'This field will be populated when submitted').with('readonly').withConcat('class', 'text-gray-500')
+      x.withLabel('ID').with('placeholder', 'This field will be populated when submitted').with('readonly').withConcat('class', 'text-gray-500 dark:text-gray-400')
     );
     this.inputs();
     this.form.newGroup();
     if (this.$route.params['id'] !== 'new') {
       this.form.withInput('delete', 'button', (x) =>
-        x.on('click', this.deleteEntity).withLabel('').with('value', 'Delete').withConcat('class', 'bg-red-300 hover:bg-red-500 hover:text-white')
+        x.on('click', this.deleteEntity).withLabel('').with('value', 'Delete').withConcat('class', 'bg-red-300 hover:bg-red-500 hover:text-white dark:bg-red-400 dark:hover:bg-red-500 dark:border-red-400')
       );
     }
     this.form.withInput('submit', 'submit', (x) => x.withLabel('').with('value', 'Submit'));

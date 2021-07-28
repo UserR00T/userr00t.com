@@ -22,6 +22,8 @@
           rounded-full
           text-gray-700
           bg-white
+          dark:bg-gray-700
+          dark:text-gray-400
         "
         @click="toggleValue"
       >

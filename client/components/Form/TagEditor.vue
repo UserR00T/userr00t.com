@@ -9,7 +9,7 @@
       </UiBadge>
     </li>
     <li class="flex-1 ml-1">
-      <input type="text" v-model="newTag" class="w-full focus:outline-none" @keydown.space.prevent="addTag" @keydown.enter.prevent="addTag" />
+      <input type="text" v-model="newTag" class="w-full bg-transparent focus:outline-none" @keydown.space.prevent="addTag" @keydown.enter.prevent="addTag" />
     </li>
   </ul>
 </template>
