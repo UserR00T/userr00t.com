@@ -10,7 +10,7 @@
         </UiBadge>
       </template>
       <template #row-shortDescription="{ entity }">
-        {{ entity.shortDescription.length > 128 ? `${entity.shortDescription.substring(0, 128)}...` : entity.shortDescription }}
+        {{ entity.shortDescription.length > 48 ? `${entity.shortDescription.substring(0, 48)}...` : entity.shortDescription }}
       </template>
     </UiTable>
   </article>
