@@ -117,22 +117,16 @@
 
     public start(): void {
       this.ctx = this.canvas.getContext('2d')!;
-      let frame: number;
 
       const loop = () => {
-        frame = requestAnimationFrame(loop);
-
-        this.render(frame);
-
-        return () => {
-          cancelAnimationFrame(frame);
-        };
+        this.render();
+        requestAnimationFrame(loop);
       };
 
       this.subscribe();
       this.resizeCanvas();
 
-      frame = requestAnimationFrame(loop);
+      requestAnimationFrame(loop);
     }
 
     private subscribe(): void {
@@ -141,7 +135,7 @@
       window.addEventListener('mousemove', this.pointerMove.bind(this));
     }
 
-    private render(_: number): void {
+    private render(): void {
       this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
       for (const particle of this._particles) {
         particle.update(this._mouse);
