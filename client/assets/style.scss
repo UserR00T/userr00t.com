@@ -41,3 +41,7 @@ ul > li {
     @apply border-gray-300 text-gray-700 dark:text-gray-400;
   }
 }
+
+body {
+  @apply font-mono;
+}
