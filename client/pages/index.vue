@@ -26,8 +26,7 @@
         :tags="latestUpdatedProject.tags"
         :url="latestUpdatedProject.url"
       />
-      <Skill :name="name" :skills="skills[name]" v-for="(name, i) in allSkillsShown ? Object.keys(skills) : Object.keys(skills).slice(0, 2)" :key="i" />
-      <UiDivider :shown.sync="allSkillsShown" />
+      <Skill :name="name" :skills="skills[name]" v-for="(name, i) in Object.keys(skills)" :key="i" />
     </section>
     <aside class="w-1/5 sm:w-3/5" ref="space"></aside>
   </section>
@@ -81,15 +80,5 @@ import Sparticles from 'sparticles';
   },
 })
 export default class Index extends Vue {
-  allSkillsShown = true;
-
-  @Watch('allSkillsShown')
-  onShownToggle() {
-    if (this.$refs['space']) {
-      // @ts-ignore
-      this.$refs['space'].children[0].height = 0;
-    }
-    window.dispatchEvent(new Event('resize'));
-  }
 }
 </script>
