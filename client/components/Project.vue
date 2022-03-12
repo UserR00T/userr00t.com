@@ -1,5 +1,5 @@
 <template>
-  <article class="flex flex-col justify-between mt-4 rounded-md shadow dark:shadow-md">
+  <article class="flex flex-col justify-between mt-4 rounded-md shadow dark:bg-gray-700">
     <a :href="url">
       <h1 class="py-2 mx-4 hero-text lg">
         <span v-show="label">{{ label }}</span>

@@ -1,5 +1,5 @@
 <template>
-  <article class="my-4 rounded-md shadow dark:shadow-md">
+  <article class="my-4 rounded-md shadow dark:bg-gray-700">
     <h1 class="py-2 mx-4 hero-text lg">
       <span>Skills</span>
       <span class="text-theme">{{ name }}</span>
