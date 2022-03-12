@@ -28,14 +28,16 @@
       />
       <Skill :name="name" :skills="skills[name]" v-for="(name, i) in Object.keys(skills)" :key="i" />
     </section>
-    <aside class="w-1/5 sm:w-3/5" ref="space"></aside>
+    <aside class="w-1/5 sm:w-3/5" ref="space">
+      <canvas ref="canvas">
+      </canvas>
+    </aside>
   </section>
 </template>
 
 <script lang="ts">
 import { Vue, Component, Watch } from 'vue-property-decorator';
-// @ts-ignore - no types file found for this module
-import Sparticles from 'sparticles';
+import { Hero } from '../plugins/heroRenderer';
 
 @Component({
   async asyncData({ $axios }) {
@@ -50,33 +52,13 @@ import Sparticles from 'sparticles';
     return { latestProject, latestUpdatedProject, skills, description };
   },
   mounted() {
-    new Sparticles(this.$refs['space'], {
-      composition: 'source-over',
-      count: 350,
-      speed: 4,
-      parallax: 0,
-      direction: 40,
-      xVariance: 1,
-      yVariance: 1,
-      rotate: true,
-      rotation: 1,
-      alphaSpeed: 6.5,
-      alphaVariance: 1,
-      minAlpha: 0,
-      maxAlpha: 1,
-      minSize: 1,
-      maxSize: 10,
-      style: 'both',
-      bounce: false,
-      drift: 1,
-      glow: 0,
-      twinkle: false,
-      color: ['random'],
-      shape: 'triangle',
-      imageUrl: '',
-    });
+    if (!this.$refs['canvas']) {
+      return;
+    }
 
-    window.dispatchEvent(new Event('resize'));
+    const canvas = this.$refs['canvas'] as HTMLCanvasElement;
+    const hero = new Hero(canvas);
+    hero.start();
   },
 })
 export default class Index extends Vue {

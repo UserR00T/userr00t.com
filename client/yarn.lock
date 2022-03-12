@@ -8924,11 +8924,6 @@ source-map@^0.7.3, source-map@~0.7.2:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.7.3.tgz#5302f8169031735226544092e64981f751750383"
   integrity sha512-CkCj6giN3S+n9qrYiBTX5gystlENnRW5jZeNLHpe6aue+SrHcG5VYwujhW9s4dY31mEGsxBDrHR6oI69fTXsaQ==
 
-sparticles@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/sparticles/-/sparticles-1.2.0.tgz#32d91d8a97437bb6720655cff2f05adb9525215c"
-  integrity sha512-2iRWuBobz32p6n4NFQaIhlC1Ot4lh4r+BeqAihakV74OGFCcqWg+Cxik1uj8zhbqFMBNlmKrSnbgRAH0HFcuCw==
-
 spdx-correct@^3.0.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/spdx-correct/-/spdx-correct-3.1.1.tgz#dece81ac9c1e6713e5f7d1b6f17d468fa53d89a9"
